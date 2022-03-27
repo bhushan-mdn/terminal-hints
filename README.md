@@ -1,2 +1,10 @@
 # terminal-hints
-Some tips for easing your use of the terminal
+Some simple tips to make your life easier.
+
+## zsh
+
+## starship
+
+## fzf
+
+## batcat
