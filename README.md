@@ -19,7 +19,8 @@ The following plugins have been really useful:
 
 
 ## starship
-A minimalist shell prompt theme.
+A minimalist shell prompt theme.  
 https://starship.rs/
 
+## More
 - [ibraheemdev/modern-unix](https://github.com/ibraheemdev/modern-unix) - Post-modern replacements for commonly used cli utilities.
