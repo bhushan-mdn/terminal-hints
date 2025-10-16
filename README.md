@@ -6,19 +6,18 @@ If you want to learn about using the command line use one of the following:
 - https://roadmap.sh/devops (Go through the Process & Performance Monitoring, Networking and Text Manipulation tools sections)
 
 ## zsh
-Install zsh and oh-my-zsh for managing plugins.
-The following plugins have been really useful:
-1. [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+Step 1: Install zsh and oh-my-zsh (nickname: omz) for managing plugins.
+Step 2: Install the following plugins which are really useful:
+1. [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) (Syntax highlighting for your commands
 2. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-3. fzf (for reverse history search and directory search).
+3. fzf (for reverse history search and directory, file search - great thing is it's all fuzzy).
    Usually I source them directly after installing fzf.
    ```
    source $HOME/.local/share/fzf/key-bindings.zsh
    source $HOME/.local/share/fzf/completion.zsh
    ```
 
-
-## starship
+## starship (maybe just use robyrussel from omz)
 A minimalist shell prompt theme.  
 https://starship.rs/
 
