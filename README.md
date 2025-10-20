@@ -82,6 +82,13 @@ Streamline secure connections and password management.
 
 ---
 
+## ⚙️Development
+Tools that help with development
+
+* `git-delta`: A viewer for Git diffs that enhances readability by providing syntax highlighting, side-by-side view, and robust paging. It makes reviewing code changes much easier directly in the terminal.
+
+---
+
 ## 🔗 Inspiration & Dotfiles
 Check out how experienced power-users configure their terminals and link them here to encourage exploration:
 
