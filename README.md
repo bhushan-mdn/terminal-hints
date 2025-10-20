@@ -34,12 +34,17 @@ Maximize your history to maintain context across sessions:
 ---
 
 ## ✨ The Prompt & Appearance
+
+### Prompt Themes
 Choose a prompt that is fast, informative, and visually appealing.
 
 * **OMZ Themes First:** Start with a clean, fast built-in OMZ theme (like `robyrussel` or `agnoster`) before adding more complexity.
 * **Power Prompts (The Alternatives):**
     * **[Powerlevel10k](https://github.com/romkatv/powerlevel10k):** Extremely popular, highly configurable, and blisteringly fast Zsh theme. A must-try for many.
     * **[starship](https://starship.rs/):** A cross-shell, minimalist prompt that is fast and context-aware (shows Git branch, language versions, exit codes, etc.).
+
+### 🎨 Aesthetics & Fonts
+* **⚠️ Mandatory Font:** To display the icons and glyphs used by modern power prompts and utilities, you *must* install a **Nerd Font** (e.g., Meslo, FiraCode, or Hack patched with glyphs).
 
 ---
 
@@ -52,8 +57,16 @@ The real power of the terminal comes from streamlining repetitive tasks.
 * **Functions:** Use for a common **set of commands** or when you need to pass arguments or perform logic (e.g., a function to clone a repo and immediately `cd` into it).
 
 ### Environment Variables
-* **Standardized Editor:** Define the `EDITOR` (or `VISUAL`) environment variable (e.g., `export EDITOR=nvim`). This allows you to use `\$EDITOR` in other aliases and scripts.
-* **Contextual Editor:** Set your editor based on context, such as switching to a less resource-intensive editor (like `nano` or `vi`) when connected via **SSH** and reserving a full GUI-aware editor (like `nvim` or `code`) for local use.
+* **Standardized Editor:** Define the `EDITOR` (or `VISUAL`) variable.
+* **Contextual Editor:** Set your editor based on context using logic in your `.zshrc`:
+    ```bash
+    # Use a minimal editor over SSH, full editor otherwise.
+    if [ -z "$SSH_CLIENT" ]; then
+      export EDITOR=nvim
+    else
+      export EDITOR=vi
+    fi
+    ```
 
 ### Directory Jumps
 Stop typing full paths. Use a specialized tool for quick directory navigation:
@@ -62,13 +75,35 @@ Stop typing full paths. Use a specialized tool for quick directory navigation:
 
 ---
 
+## ⚙️ Utilities & Text Processing
+Replace older, less-efficient tools with their modern, faster, and more user-friendly counterparts.
+
+* **[ibraheemdev/modern-unix](https://github.com/ibraheemdev/modern-unix):** A curated list of excellent post-modern replacements for classic CLI utilities.
+
+### Essential Tools
+* **[bat](https://github.com/sharkdp/bat):** A `cat` clone with syntax highlighting, Git integration, and automatic paging.
+* **`yq`:** A portable command-line **YAML processor**, essential for config files (Docker, Kubernetes).
+* **`jq`:** The definitive command-line **JSON processor**.
+* **[sd](https://github.com/chmln/sd):** A fast, user-friendly replacement for `sed` that makes simple string replacements easy.
+* **[nnn](https://github.com/jarun/nnn):** A minimalist yet powerful file manager with VI-like keybindings for efficient file navigation.
+
+---
+
+## 💻 Development Workflow
+
+* **`git-delta`:** A viewer for Git diffs that enhances readability by providing syntax highlighting, side-by-side view, and robust paging.
+* **[asdf](https://asdf-vm.com/):** A version manager for handling multiple runtime versions (Node.js, Python, Ruby, etc.) with a single, consistent tool.
+* **`shellcheck`:** Use this static analysis tool to write robust, reliable, and secure shell scripts.
+
+---
+
 ## 🧑‍💻 Multiplexers & Session Management
-Instead of relying on desktop-specific features like iTerm tabs, use a terminal multiplexer. This ensures a consistent environment regardless of whether you're local or SSH-ed into a server.
+Use a terminal multiplexer for a consistent environment, especially on remote servers.
 
-* **[tmux](https://github.com/tmux/tmux) or [Zellij](https://zellij.dev/):** Use these to manage multiple windows, panes, and persistent sessions within a single terminal window.
+* **[tmux](https://github.com/tmux/tmux) or [Zellij](https://zellij.dev/):** Manage multiple windows, panes, and persistent sessions.
 
-### tmux Workflow
-* **Home Session on Startup:** Configure your `.zshrc` to automatically check for and attach to a "home" tmux session upon launching your terminal, otherwise creating it.
+### Tmux Workflow
+* **Home Session on Startup:** Configure your `.zshrc` to automatically check for and attach to a "home" tmux session upon launching your terminal.
 * **The Primeagen's Sessionizer:** Use a script like The Primeagen's **`tmux-sessionizer`** to quickly switch between or create new tmux sessions based on project directories.
     -   *Find it in The Primeagen's dotfiles repo.*
 
@@ -79,13 +114,6 @@ Streamline secure connections and password management.
 
 * **SSH Agent Initialization:** Automatically start the `ssh-agent` upon shell login and load your private key to avoid typing your passphrase for every connection.
 * **[Pass](https://www.passwordstore.org/) (The Standard Unix Password Manager):** For secure storage of sensitive credentials, integrate the `pass` utility.
-
----
-
-## ⚙️Development
-Tools that help with development
-
-* `git-delta`: A viewer for Git diffs that enhances readability by providing syntax highlighting, side-by-side view, and robust paging. It makes reviewing code changes much easier directly in the terminal.
 
 ---
 
