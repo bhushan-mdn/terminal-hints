@@ -59,6 +59,10 @@ The real power of the terminal comes from streamlining repetitive tasks.
 ### Aliases vs. Functions
 * **Aliases:** Use for simple command replacements (e.g., `alias ls='ls -lah'`).
     * **OMZ Plugin Aliases:** Utilize aliases provided by OMZ plugins (e.g., the `git` plugin provides shortcuts like `gs` for `git status`).
+        * These references would be handy, just learn the most commonly used.
+            * https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+            * https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/systemd
+            * https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker
 * **Functions:** Use for a common **set of commands** or when you need to pass arguments or perform logic (e.g., a function to clone a repo and immediately `cd` into it).
     * e.g. `function gclg() { git clone github.com/google/$1 }` Usage: `gclg uuid` 
 
