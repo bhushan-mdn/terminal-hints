@@ -1,6 +1,10 @@
 # terminal-hints
 Some simple tips and tools to significantly ease and enhance your command-line interface (CLI) life, moving from basic usage to power-user efficiency. 🚀
 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/bhushan-mdn/terminal-hits) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![Built With](https://img.shields.io/badge/Built%20With-Zsh%2Ftmux%2Ffzf-blue.svg)]()
+
 ## 📚 Learning the Command Line
 If you're looking to solidify your fundamental knowledge, check out these excellent resources:
 
@@ -30,6 +34,7 @@ Install the following via OMZ (or manually) for a massive quality-of-life improv
 Maximize your history to maintain context across sessions:
 
 * **Absurdly High History:** Set the `HISTSIZE` and `SAVEHIST` variables in your `.zshrc` to a very large number (e.g., `1000000`) so you never lose your command history.
+* **[Atuin](https://atuin.sh/):** A modern, SQLite-backed shell history replacement that records more context and supports cross-machine synchronization.
 
 ---
 
@@ -55,6 +60,7 @@ The real power of the terminal comes from streamlining repetitive tasks.
 * **Aliases:** Use for simple command replacements (e.g., `alias ls='ls -lah'`).
     * **OMZ Plugin Aliases:** Utilize aliases provided by OMZ plugins (e.g., the `git` plugin provides shortcuts like `gs` for `git status`).
 * **Functions:** Use for a common **set of commands** or when you need to pass arguments or perform logic (e.g., a function to clone a repo and immediately `cd` into it).
+    * e.g. `function gclg() { git clone github.com/google/$1 }` Usage: `gclg uuid` 
 
 ### Environment Variables
 * **Standardized Editor:** Define the `EDITOR` (or `VISUAL`) variable.
@@ -80,12 +86,18 @@ Replace older, less-efficient tools with their modern, faster, and more user-fri
 
 * **[ibraheemdev/modern-unix](https://github.com/ibraheemdev/modern-unix):** A curated list of excellent post-modern replacements for classic CLI utilities.
 
-### Essential Tools
+### Navigation & File Inspection
 * **[bat](https://github.com/sharkdp/bat):** A `cat` clone with syntax highlighting, Git integration, and automatic paging.
-* **`yq`:** A portable command-line **YAML processor**, essential for config files (Docker, Kubernetes).
-* **`jq`:** The definitive command-line **JSON processor**.
+* **[nnn](https://github.com/jarun/nnn):** A minimalist yet powerful file manager with VI-like keybindings.
+* **`ripgrep` (`rg`):** The fastest recursive `grep` alternative, built to respect `.gitignore` rules.
+* **[tldr](https://tldr.sh/):** Provides community-driven, simplified man pages with practical usage examples.
+
+### Data & System Tools
+* **`jq`** and **`yq`:** The definitive command-line processors for **JSON** and **YAML** respectively.
+* **[hurl](https://hurl.dev/):** A command-line tool that runs HTTP requests defined in a simple text format—great for testing APIs.
+* **[procs](https://github.com/dalance/procs):** A modern, readable, and colored alternative to the classic `ps` command.
+* **[duf](https://github.com/muesli/duf):** A user-friendly replacement for `df` to view disk space usage.
 * **[sd](https://github.com/chmln/sd):** A fast, user-friendly replacement for `sed` that makes simple string replacements easy.
-* **[nnn](https://github.com/jarun/nnn):** A minimalist yet powerful file manager with VI-like keybindings for efficient file navigation.
 
 ---
 
@@ -126,3 +138,14 @@ Check out how experienced power-users configure their terminals and link them he
     -   https://github.com/LukeSmithxyz/voidrice
 * **ThePrimeagen's Dotfiles (GitHub):** Focuses on highly productive Neovim and tmux workflows.
     -   https://github.com/ThePrimeagen/.dotfiles
+
+---
+
+## 🌐 Community & Discovery (Subreddits)
+
+These subreddits are excellent resources for finding new tools, seeing creative terminal setups ("ricing"), and discussing command-line efficiency.
+
+* **r/unixporn:** Focused on aesthetic customization of UNIX-like environments (including terminals and shells). This is where you'll find the best color schemes and prompt configurations.
+* **r/commandline:** A general discussion forum for command-line efficiency, scripts, utilities, and general workflow tips.
+* **r/vim** / **r/neovim:** If you are serious about text editing within the terminal, these communities are essential for configuration and advanced usage.
+* **r/devops:** Often features discussions on advanced automation, scripting, and server management tools.
