@@ -36,6 +36,13 @@ Maximize your history to maintain context across sessions:
 * **Absurdly High History:** Set the `HISTSIZE` and `SAVEHIST` variables in your `.zshrc` to a very large number (e.g., `1000000`) so you never lose your command history.
 * **[Atuin](https://atuin.sh/):** A modern, SQLite-backed shell history replacement that records more context and supports cross-machine synchronization.
 
+### ⌨️ VI Mode for Shell Editing
+For powerful command-line editing, set your shell to use **VI keybindings**. This allows you to navigate and edit commands using the highly efficient `hjkl` and other VI motions, often faster than using arrow keys and Home/End.
+    ```bash
+    # Add this to your .zshrc or .bashrc
+    bindkey -v
+    ```
+
 ---
 
 ## ✨ The Prompt & Appearance
